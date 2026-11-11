@@ -2,6 +2,8 @@
 
 **Understand process variation before treating every change as a problem.**
 
+[Live demo](https://gaugeworks.vercel.app) · [Brennan's portfolio](https://brennan-portfolio-jade.vercel.app)
+
 Gaugeworks is a local statistical-process-control workbench for ordered, individual measurements. Import a CSV, establish a fixed baseline, inspect control-chart signals, and export the calculation behind the chart. A small Python CLI provides the same core analysis without a browser or third-party packages.
 
 **Project context:** manufacturing and quality control make a useful starting point for software. A measurement can meet its drawing tolerance and still be part of a changing process. This project makes that distinction visible and keeps the input, assumptions, and calculation inspectable.
