@@ -1,0 +1,7 @@
+{
+  "cases": [
+    {"name":"hand-computable four parts","values":[10,12,11,13],"baseline":4,"spec":{"lower":0,"upper":20},"expected":{"mean":11.5,"movingRangeMean":1.6666666666666667,"sigma":1.4775413711583927,"lowerControl":7.067375886524822,"upperControl":15.932624113475178,"cp":2.256,"cpk":1.9176}},
+    {"name":"monitoring never refits baseline","values":[10,12,11,13,100,500],"baseline":4,"spec":{"lower":0,"upper":20},"expected":{"mean":11.5,"movingRangeMean":1.6666666666666667,"sigma":1.4775413711583927,"lowerControl":7.067375886524822,"upperControl":15.932624113475178,"cp":2.256,"cpk":1.9176}},
+    {"name":"zero variance","values":[12,12,12,13],"baseline":3,"spec":{"lower":0,"upper":20},"expected":{"mean":12,"movingRangeMean":0,"sigma":0,"lowerControl":12,"upperControl":12,"cp":null,"cpk":null}}
+  ]
+}
