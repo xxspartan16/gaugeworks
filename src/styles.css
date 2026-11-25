@@ -47,6 +47,7 @@ svg { flex-shrink: 0; }
 .brand-mark svg { width: 29px; height: 29px; }
 .masthead nav { display: flex; align-items: center; gap: clamp(3px, .65vw, 13px); }
 .nav-item { color: var(--muted); font-size: 12px; padding: 8px 13px; border-radius: 100px; border: 1px solid transparent; white-space: nowrap; }
+.nav-compact { display: none; }
 .nav-item:hover, .nav-item.active { color: var(--text); }
 .nav-item.active { border-color: var(--edge); background: linear-gradient(#222628, #1a1c1e); }
 .local-status { justify-self: end; display: flex; gap: 9px; align-items: center; color: var(--secondary); font-size: 11px; }
@@ -255,6 +256,8 @@ th { background: #121516; font: 10px var(--mono); color: var(--muted); }
   .subheading { align-items: start; flex-direction: column; padding-top: 16px; }
 }
 @media (max-width: 470px) {
+  .nav-full { display: none; }
+  .nav-compact { display: inline; }
   .hero { min-height: 0; align-items: start; flex-direction: column; }
   .hero-copy { padding: 23px 19px 0; width: 100%; }
   .hero-art { position: relative; order: 1; inset: auto; width: 100%; height: clamp(140px, 38vw, 185px); mask-image: none; }

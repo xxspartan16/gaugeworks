@@ -74,13 +74,15 @@ export default function App() {
     download('gaugeworks-analysis.json', JSON.stringify({ schemaVersion: 1, tool: 'Gaugeworks 0.1', generatedAt: new Date().toISOString(), source: sourceName, synthetic: fixture !== null, unit: 'mm', specification: spec, baselineCount: baseline, methodology: 'Individuals chart; sigma = mean adjacent moving range / 1.128; baseline frozen to first N observations.', analysis, measurements: points }, null, 2), 'application/json');
     setNotice('Analysis report exported.');
   }
-  const nav = (id: Tab, title: string) => (
+  const nav = (id: Tab, title: string, compactTitle = title) => (
     <button
       className={tab === id ? 'nav-item active' : 'nav-item'}
       onClick={() => setTab(id)}
       aria-current={tab === id ? 'page' : undefined}
+      aria-label={title}
     >
-      {title}
+      <span className="nav-full">{title}</span>
+      <span className="nav-compact">{compactTitle}</span>
     </button>
   );
 
@@ -101,9 +103,9 @@ export default function App() {
           <span>Gaugeworks</span>
         </a>
         <nav aria-label="Main navigation">
-          {nav('overview', 'Process overview')}
+          {nav('overview', 'Process overview', 'Overview')}
           {nav('measurements', 'Measurements')}
-          {nav('method', 'Method & assumptions')}
+          {nav('method', 'Method & assumptions', 'Method')}
         </nav>
         <span className="local-status"><i /> Local workspace</span>
       </div>
